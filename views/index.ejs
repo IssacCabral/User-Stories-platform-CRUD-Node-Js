@@ -7,6 +7,20 @@
             <hr>
             <a href="/criar_historia" class="btn btn-primary">Crie a sua aqui</a>
             <hr>
+
+            <% stories.forEach(story => { %>
+                <br>
+                <div class="card">
+                    <div class="card-body">
+                        <h4> <%= story.title %> </h4>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/historia/<%= story.id %>"> <button class="btn btn-info"> Visualizar </button> </a>
+                        <a href="/historia/<%= story.id %>"> <button class="btn btn-warning"> Alterar </button> </a>
+                        <a href="/historia/<%= story.id %>"> <button class="btn btn-danger"> Deletar </button> </a>
+                    </div>
+                </div>
+            <% }) %>
         </div>
     </body>
 <%- include ('partials/footer.ejs') %>      
