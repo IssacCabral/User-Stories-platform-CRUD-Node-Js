@@ -1,0 +1,22 @@
+<%- include ('partials/header.ejs') %>
+<body>
+    <%- include ('partials/navbar.ejs') %>
+    <div class="container" style="margin-top: 30px;">
+        <div>
+            <div>
+                <h3 style="color: white;">Criar História</h3>
+            </div>
+            <div >
+                <form method="POST" action="/salvarhistoria">
+                    <label style="color: white;">Título</label>
+                    <input name="titulo" type="text" placeholder="Título" class="form-control">
+                    <br><label style="color: white;">Descrição/Detalhes</label>
+                    <textarea name="descricao" placeholder="Descreva a sua história aqui" class="form-control"></textarea>
+                    <br>
+                    <button class="btn btn-primary">Criar</button> <!--success, primary, danger, warning-->
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<%- include ('partials/footer.ejs') %>   
