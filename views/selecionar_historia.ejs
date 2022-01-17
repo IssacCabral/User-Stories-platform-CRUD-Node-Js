@@ -1,0 +1,26 @@
+<%- include ('partials/header.ejs') %>
+    <body>
+        <%- include ('partials/navbar.ejs') %>
+        <div class="container">
+            <hr> 
+            <div class="card" style="background-color: rgb(70, 109, 240)">
+                <div class="card-body" style="color:rgb(255, 255, 255)">
+                    <h2> <%= story.title %> </h2>
+                    <p> <%= story.description %> </p> 
+                </div>
+            </div>
+
+            <div>
+                <br><h3 style="color: white; text-align: center;">Alterar História</h3>
+            </div>
+            <form method="POST" action="/alterarhistoria/<%= story.id %>">
+                <label style="color: white;">Título</label>
+                <input name="titulo" type="text" placeholder="Título" class="form-control">
+                <br><label style="color: white;">Descrição/Detalhes</label>
+                <textarea name="descricao" placeholder="Descreva a sua história aqui" class="form-control"></textarea>
+                <br>
+                <button class="btn btn-primary">Alterar</button> <!--success, primary, danger, warning-->
+            </form>
+        </div>
+    </body>
+<%- include ('partials/footer.ejs') %>  
